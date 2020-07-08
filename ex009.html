@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Países</title>
+</head>
+<body>
+    <h1>Sistema de Países</h1>
+    Digite seu País: <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function verificar(){
+            var textop = document.getElementById("txtp");
+            var res = document.getElementById("res");
+            var textopais = String(textop.value);
+            res.innerHTML = `<p> voce atualmente mora em <strong>${textopais}`
+
+            if(textopais != 'Brasil'){
+                res.innerHTML += `Voce é <strong>Estrangeiro</strong>`
+            }
+            else{
+                res.innerHTML += `Voce é <strong>Brasileiro</strong>`
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
